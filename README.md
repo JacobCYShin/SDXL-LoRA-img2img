@@ -38,7 +38,7 @@ accelerate config  # 첫 실행 시만
 | `outputs/` | 생성된 이미지 출력 경로                    |
 ```
 
-## 모델 체크포인트 다운로드
+## 모델 체크포인트
 ```
 |-models
 |----lora
@@ -46,6 +46,7 @@ accelerate config  # 첫 실행 시만
 |----Salesforce
 |----stabilityai
 ```
+- assets/package_structure.png 을 참고하여, 모델 파라미터를 다운로드
 
 ## 데이터 구축/모델학습/테스트 순서
 - data/ 폴더(ex. data/TOFU)에 이미지 업로드 (이미지가 적을 경우 ChatGPT로 생성)
