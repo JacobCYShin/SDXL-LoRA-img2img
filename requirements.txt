@@ -1,0 +1,16 @@
+# Core libraries
+transformers>=4.40.0
+diffusers==0.30.0
+accelerate>=0.27.0
+peft>=0.10.0
+datasets>=2.19.0
+bitsandbytes>=0.42.0
+safetensors>=0.4.2
+compel>=2.0.0
+invisible-watermark>=0.2.0
+k-diffusion @ git+https://github.com/crowsonkb/k-diffusion.git
+
+# Face image + IP-Adapter Inference
+Pillow>=10.0.0
+huggingface_hub>=0.20.0
+sentencepiece  # for some tokenizers

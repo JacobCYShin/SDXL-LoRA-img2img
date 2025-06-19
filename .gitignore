@@ -1,0 +1,10 @@
+# sdxl_lora_trainer/.gitignore
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+.env
+outputs/
+models/
+data/
+assets/
+accelerate_config.yaml
