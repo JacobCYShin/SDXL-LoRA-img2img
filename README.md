@@ -38,6 +38,9 @@ accelerate config  # 첫 실행 시만
 | `outputs/` | 생성된 이미지 출력 경로                    |
 ```
 
+### 학습/추론론 시 요구 GPU 메모리
+9626MiB 
+
 ## 모델 체크포인트
 ```
 |-models
@@ -55,6 +58,16 @@ accelerate config  # 첫 실행 시만
 - scripts/train_text2img_lora_sdxl.py로 LoRA 학습 
 - scripts/infer_img2img.py로 학습된 LoRA 테스트
 
+
+
+### ChatGPT 기반 두부분식 캐릭터(학습용) 생성 과정
+```
+(두부분식 캐릭터 이미지 삽입과 함께) "1장 정도 두부 분식 스타일 캐릭터 이미지 생성해 줄 수 있어?"
+(다양성 추가 요청 반복) "조금 더 이목구비나 변형 주면서, 해당 캐릭터의 친구들을 몇 개 만들어줄 수 있어?"
+(다양성 추가 요청 반복) "좀 더 다양한 특색 있는 친구로 다양하게 만들어줘"
+(실제 인물 기반 캐릭터화 요청) "이 친구 사진을 보고, 너가 여태까지 만든 두부 캐릭터처럼 만들어줘"
+```
+![alt text](assets/input_imgs.png)
 
 ## 두부분식 데이터 생성 및 캡셔닝 과정
 
@@ -110,17 +123,8 @@ accelerate launch scripts/train_t2i_lora_sdxl.py --pretrained_model_name_or_path
 python -m scripts.infer_img2img
 ```
 
+![alt text](assets/output_img.png)
 ---
-### ChatGPT 기반 두부분식 캐릭터(학습용) 생성 과정
-```
-(두부분식 캐릭터 이미지 삽입과 함께) "1장 정도 두부 분식 스타일 캐릭터 이미지 생성해 줄 수 있어?"
-(다양성 추가 요청 반복) "조금 더 이목구비나 변형 주면서, 해당 캐릭터의 친구들을 몇 개 만들어줄 수 있어?"
-(다양성 추가 요청 반복) "좀 더 다양한 특색 있는 친구로 다양하게 만들어줘"
-(실제 인물 기반 캐릭터화 요청) "이 친구 사진을 보고, 너가 여태까지 만든 두부 캐릭터처럼 만들어줘"
-```
-
-### 학습/추론론 시 요구 GPU 메모리
-9626MiB 
 
 ## 라이선스
 - HuggingFace diffusers 기반
