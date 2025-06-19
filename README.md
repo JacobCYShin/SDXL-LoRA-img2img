@@ -67,7 +67,7 @@ accelerate config  # 첫 실행 시만
 (다양성 추가 요청 반복) "좀 더 다양한 특색 있는 친구로 다양하게 만들어줘"
 (실제 인물 기반 캐릭터화 요청) "이 친구 사진을 보고, 너가 여태까지 만든 두부 캐릭터처럼 만들어줘"
 ```
-![alt text](assets/input_imgs.png)
+![ChatGPT로 생성한 두부분식 이미지](assets/input_imgs.png)
 
 ## 두부분식 데이터 생성 및 캡셔닝 과정
 
@@ -123,7 +123,7 @@ accelerate launch scripts/train_t2i_lora_sdxl.py --pretrained_model_name_or_path
 python -m scripts.infer_img2img
 ```
 
-![alt text](assets/output_img.png)
+![학습한 LoRA로 생성한 두부분식 캐릭터 이미지지](assets/output_img.png)
 ---
 
 ## 라이선스
